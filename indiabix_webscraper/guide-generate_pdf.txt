@@ -1,0 +1,20 @@
+# All categories → ./pdfs/
+python generate_pdf.py
+
+# Single category
+python generate_pdf.py --category "Science"
+
+# Filter by month
+python generate_pdf.py --month 2026-01
+
+# Both together
+python generate_pdf.py --category "Economy" --month 2026-03
+
+# Custom output folder
+python generate_pdf.py --out ./my_pdfs
+
+# Also merge everything into one master PDF
+python generate_pdf.py --combined
+
+# Custom API URL
+python generate_pdf.py --api http://192.168.1.5:8000

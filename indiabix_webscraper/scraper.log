@@ -1,0 +1,408 @@
+2026-05-30 12:48:54,225 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-01 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,257 INFO SUCCESS 2025-11-01 (10 questions)
+2026-05-30 12:48:54,428 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-07 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,461 INFO SUCCESS 2025-11-07 (10 questions)
+2026-05-30 12:48:54,517 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-08 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,559 INFO SUCCESS 2025-11-08 (10 questions)
+2026-05-30 12:48:54,578 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-06 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,609 INFO SUCCESS 2025-11-06 (11 questions)
+2026-05-30 12:48:54,634 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-04 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,666 INFO SUCCESS 2025-11-04 (12 questions)
+2026-05-30 12:48:54,687 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-09 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,710 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-03 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,733 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-05 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,759 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-10 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,787 INFO SUCCESS 2025-11-09 (10 questions)
+2026-05-30 12:48:54,796 INFO SUCCESS 2025-11-05 (11 questions)
+2026-05-30 12:48:54,801 INFO SUCCESS 2025-11-03 (10 questions)
+2026-05-30 12:48:54,810 INFO SUCCESS 2025-11-10 (10 questions)
+2026-05-30 12:48:54,878 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-02 "HTTP/1.1 200 OK"
+2026-05-30 12:48:54,908 INFO SUCCESS 2025-11-02 (10 questions)
+2026-05-30 12:48:55,592 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-13 "HTTP/1.1 200 OK"
+2026-05-30 12:48:55,622 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-11 "HTTP/1.1 200 OK"
+2026-05-30 12:48:55,656 INFO SUCCESS 2025-11-13 (10 questions)
+2026-05-30 12:48:55,663 INFO SUCCESS 2025-11-11 (13 questions)
+2026-05-30 12:48:55,952 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-12 "HTTP/1.1 200 OK"
+2026-05-30 12:48:55,991 INFO SUCCESS 2025-11-12 (12 questions)
+2026-05-30 12:48:56,094 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-15 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,128 INFO SUCCESS 2025-11-15 (10 questions)
+2026-05-30 12:48:56,154 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-14 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,186 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-17 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,249 INFO SUCCESS 2025-11-14 (12 questions)
+2026-05-30 12:48:56,256 INFO SUCCESS 2025-11-17 (12 questions)
+2026-05-30 12:48:56,373 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-18 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,410 INFO SUCCESS 2025-11-18 (14 questions)
+2026-05-30 12:48:56,471 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-16 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,472 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-19 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,518 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-20 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,547 INFO SUCCESS 2025-11-16 (10 questions)
+2026-05-30 12:48:56,556 INFO SUCCESS 2025-11-19 (10 questions)
+2026-05-30 12:48:56,570 INFO SUCCESS 2025-11-20 (11 questions)
+2026-05-30 12:48:56,768 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-21 "HTTP/1.1 200 OK"
+2026-05-30 12:48:56,806 INFO SUCCESS 2025-11-21 (10 questions)
+2026-05-30 12:48:57,384 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-22 "HTTP/1.1 200 OK"
+2026-05-30 12:48:57,422 INFO SUCCESS 2025-11-22 (10 questions)
+2026-05-30 12:48:57,529 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-23 "HTTP/1.1 200 OK"
+2026-05-30 12:48:57,567 INFO SUCCESS 2025-11-23 (10 questions)
+2026-05-30 12:48:57,884 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-27 "HTTP/1.1 200 OK"
+2026-05-30 12:48:57,921 INFO SUCCESS 2025-11-27 (10 questions)
+2026-05-30 12:48:57,953 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-24 "HTTP/1.1 200 OK"
+2026-05-30 12:48:57,989 INFO SUCCESS 2025-11-24 (14 questions)
+2026-05-30 12:48:57,996 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-25 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,020 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-26 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,050 INFO SUCCESS 2025-11-25 (11 questions)
+2026-05-30 12:48:58,059 INFO SUCCESS 2025-11-26 (11 questions)
+2026-05-30 12:48:58,066 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-30 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,095 INFO SUCCESS 2025-11-30 (10 questions)
+2026-05-30 12:48:58,165 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-29 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,230 INFO SUCCESS 2025-11-29 (10 questions)
+2026-05-30 12:48:58,324 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-01 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,357 INFO SUCCESS 2025-12-01 (12 questions)
+2026-05-30 12:48:58,499 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-11-28 "HTTP/1.1 200 OK"
+2026-05-30 12:48:58,531 INFO SUCCESS 2025-11-28 (10 questions)
+2026-05-30 12:48:59,253 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-02 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,292 INFO SUCCESS 2025-12-02 (10 questions)
+2026-05-30 12:48:59,347 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-03 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,382 INFO SUCCESS 2025-12-03 (12 questions)
+2026-05-30 12:48:59,552 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-06 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,590 INFO SUCCESS 2025-12-06 (10 questions)
+2026-05-30 12:48:59,603 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-07 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,637 INFO SUCCESS 2025-12-07 (13 questions)
+2026-05-30 12:48:59,648 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-04 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,672 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-05 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,702 INFO SUCCESS 2025-12-04 (11 questions)
+2026-05-30 12:48:59,707 INFO SUCCESS 2025-12-05 (11 questions)
+2026-05-30 12:48:59,757 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-11 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,792 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-10 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,826 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-08 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,827 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-09 "HTTP/1.1 200 OK"
+2026-05-30 12:48:59,885 INFO SUCCESS 2025-12-11 (11 questions)
+2026-05-30 12:48:59,896 INFO SUCCESS 2025-12-09 (15 questions)
+2026-05-30 12:48:59,907 INFO SUCCESS 2025-12-08 (10 questions)
+2026-05-30 12:48:59,925 INFO SUCCESS 2025-12-10 (10 questions)
+2026-05-30 12:49:00,686 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:00,739 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:00,772 INFO SUCCESS 2025-12-12 (13 questions)
+2026-05-30 12:49:00,782 INFO SUCCESS 2025-12-13 (12 questions)
+2026-05-30 12:49:00,854 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:00,884 INFO SUCCESS 2025-12-16 (10 questions)
+2026-05-30 12:49:00,951 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:00,981 INFO SUCCESS 2025-12-14 (10 questions)
+2026-05-30 12:49:01,014 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:01,043 INFO SUCCESS 2025-12-15 (10 questions)
+2026-05-30 12:49:01,073 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:01,102 INFO SUCCESS 2025-12-17 (10 questions)
+2026-05-30 12:49:01,262 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:01,297 INFO SUCCESS 2025-12-19 (11 questions)
+2026-05-30 12:49:01,377 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:01,411 INFO SUCCESS 2025-12-20 (12 questions)
+2026-05-30 12:49:01,424 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:01,454 INFO SUCCESS 2025-12-18 (10 questions)
+2026-05-30 12:49:02,737 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-29 "HTTP/1.1 200 OK"
+2026-05-30 12:49:02,770 INFO SUCCESS 2025-12-29 (10 questions)
+2026-05-30 12:49:02,968 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-27 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,008 INFO SUCCESS 2025-12-27 (11 questions)
+2026-05-30 12:49:03,034 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,059 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,084 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,137 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-26 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,138 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-25 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,139 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-28 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,208 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-24 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,209 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-30 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,259 INFO SUCCESS 2025-12-21 (10 questions)
+2026-05-30 12:49:03,268 INFO SUCCESS 2025-12-24 (10 questions)
+2026-05-30 12:49:03,279 INFO SUCCESS 2025-12-25 (10 questions)
+2026-05-30 12:49:03,289 INFO SUCCESS 2025-12-22 (11 questions)
+2026-05-30 12:49:03,297 INFO SUCCESS 2025-12-28 (10 questions)
+2026-05-30 12:49:03,307 INFO SUCCESS 2025-12-23 (10 questions)
+2026-05-30 12:49:03,323 INFO SUCCESS 2025-12-30 (10 questions)
+2026-05-30 12:49:03,340 INFO SUCCESS 2025-12-26 (10 questions)
+2026-05-30 12:49:03,811 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2025-12-31 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,850 INFO SUCCESS 2025-12-31 (10 questions)
+2026-05-30 12:49:03,906 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-01 "HTTP/1.1 200 OK"
+2026-05-30 12:49:03,934 INFO SUCCESS 2026-01-01 (10 questions)
+2026-05-30 12:49:04,547 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-06 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,580 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-03 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,580 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-05 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,627 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-04 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,628 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-02 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,673 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-08 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,701 INFO SUCCESS 2026-01-03 (10 questions)
+2026-05-30 12:49:04,702 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-09 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,756 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-07 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,787 INFO SUCCESS 2026-01-04 (10 questions)
+2026-05-30 12:49:04,794 INFO SUCCESS 2026-01-05 (11 questions)
+2026-05-30 12:49:04,809 INFO SUCCESS 2026-01-09 (11 questions)
+2026-05-30 12:49:04,811 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-10 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,840 INFO SUCCESS 2026-01-02 (10 questions)
+2026-05-30 12:49:04,845 INFO SUCCESS 2026-01-07 (12 questions)
+2026-05-30 12:49:04,850 INFO SUCCESS 2026-01-06 (10 questions)
+2026-05-30 12:49:04,853 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-11 "HTTP/1.1 200 OK"
+2026-05-30 12:49:04,884 INFO SUCCESS 2026-01-10 (11 questions)
+2026-05-30 12:49:04,894 INFO SUCCESS 2026-01-11 (12 questions)
+2026-05-30 12:49:04,906 INFO SUCCESS 2026-01-08 (10 questions)
+2026-05-30 12:49:05,595 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:05,634 INFO SUCCESS 2026-01-12 (10 questions)
+2026-05-30 12:49:05,924 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:05,958 INFO SUCCESS 2026-01-15 (10 questions)
+2026-05-30 12:49:05,991 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,019 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,045 INFO SUCCESS 2026-01-13 (11 questions)
+2026-05-30 12:49:06,051 INFO SUCCESS 2026-01-18 (10 questions)
+2026-05-30 12:49:06,055 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,078 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,106 INFO SUCCESS 2026-01-14 (10 questions)
+2026-05-30 12:49:06,112 INFO SUCCESS 2026-01-16 (10 questions)
+2026-05-30 12:49:06,223 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,246 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,275 INFO SUCCESS 2026-01-20 (10 questions)
+2026-05-30 12:49:06,281 INFO SUCCESS 2026-01-17 (11 questions)
+2026-05-30 12:49:06,289 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,319 INFO SUCCESS 2026-01-19 (11 questions)
+2026-05-30 12:49:06,329 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:06,411 INFO SUCCESS 2026-01-21 (11 questions)
+2026-05-30 12:49:07,111 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,145 INFO SUCCESS 2026-01-22 (10 questions)
+2026-05-30 12:49:07,204 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,233 INFO SUCCESS 2026-01-23 (10 questions)
+2026-05-30 12:49:07,383 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-26 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,408 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-28 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,438 INFO SUCCESS 2026-01-26 (6 questions)
+2026-05-30 12:49:07,445 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-25 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,462 INFO SUCCESS 2026-01-28 (12 questions)
+2026-05-30 12:49:07,467 INFO SUCCESS 2026-01-25 (6 questions)
+2026-05-30 12:49:07,504 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-27 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,533 INFO SUCCESS 2026-01-27 (10 questions)
+2026-05-30 12:49:07,607 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-31 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,622 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-24 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,648 INFO SUCCESS 2026-01-31 (5 questions)
+2026-05-30 12:49:07,655 INFO SUCCESS 2026-01-24 (10 questions)
+2026-05-30 12:49:07,906 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-29 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,946 INFO SUCCESS 2026-01-29 (10 questions)
+2026-05-30 12:49:07,951 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-01-30 "HTTP/1.1 200 OK"
+2026-05-30 12:49:07,980 INFO SUCCESS 2026-01-30 (10 questions)
+2026-05-30 12:49:08,663 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-02 "HTTP/1.1 200 OK"
+2026-05-30 12:49:08,697 INFO SUCCESS 2026-02-02 (7 questions)
+2026-05-30 12:49:08,922 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-01 "HTTP/1.1 200 OK"
+2026-05-30 12:49:08,949 INFO SUCCESS 2026-02-01 (5 questions)
+2026-05-30 12:49:09,022 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-05 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,051 INFO SUCCESS 2026-02-05 (10 questions)
+2026-05-30 12:49:09,113 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-04 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,140 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-03 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,194 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-06 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,218 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-08 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,218 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-07 "HTTP/1.1 200 OK"
+2026-05-30 12:49:09,271 INFO SUCCESS 2026-02-04 (11 questions)
+2026-05-30 12:49:09,280 INFO SUCCESS 2026-02-06 (10 questions)
+2026-05-30 12:49:09,292 INFO SUCCESS 2026-02-07 (10 questions)
+2026-05-30 12:49:09,312 INFO SUCCESS 2026-02-08 (12 questions)
+2026-05-30 12:49:09,343 INFO SUCCESS 2026-02-03 (10 questions)
+2026-05-30 12:49:10,456 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,486 INFO SUCCESS 2026-02-17 (10 questions)
+2026-05-30 12:49:10,670 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,695 INFO SUCCESS 2026-02-15 (6 questions)
+2026-05-30 12:49:10,716 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-09 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,739 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,764 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,786 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,813 INFO SUCCESS 2026-02-09 (10 questions)
+2026-05-30 12:49:10,821 INFO SUCCESS 2026-02-14 (9 questions)
+2026-05-30 12:49:10,833 INFO SUCCESS 2026-02-12 (11 questions)
+2026-05-30 12:49:10,839 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,862 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-10 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,863 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-11 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,908 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:10,935 INFO SUCCESS 2026-02-13 (10 questions)
+2026-05-30 12:49:10,944 INFO SUCCESS 2026-02-11 (10 questions)
+2026-05-30 12:49:10,950 INFO SUCCESS 2026-02-10 (10 questions)
+2026-05-30 12:49:10,956 INFO SUCCESS 2026-02-18 (10 questions)
+2026-05-30 12:49:10,980 INFO SUCCESS 2026-02-16 (10 questions)
+2026-05-30 12:49:11,690 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:11,759 INFO SUCCESS 2026-02-19 (7 questions)
+2026-05-30 12:49:11,946 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:11,974 INFO SUCCESS 2026-02-22 (5 questions)
+2026-05-30 12:49:11,977 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:11,998 INFO SUCCESS 2026-02-20 (6 questions)
+2026-05-30 12:49:12,157 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,184 INFO SUCCESS 2026-02-21 (6 questions)
+2026-05-30 12:49:12,234 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-28 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,259 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-25 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,281 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-24 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,311 INFO SUCCESS 2026-02-28 (11 questions)
+2026-05-30 12:49:12,319 INFO SUCCESS 2026-02-24 (10 questions)
+2026-05-30 12:49:12,333 INFO SUCCESS 2026-02-25 (10 questions)
+2026-05-30 12:49:12,338 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-27 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,367 INFO SUCCESS 2026-02-27 (10 questions)
+2026-05-30 12:49:12,378 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-26 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,407 INFO SUCCESS 2026-02-26 (10 questions)
+2026-05-30 12:49:12,437 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-02-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:12,467 INFO SUCCESS 2026-02-23 (10 questions)
+2026-05-30 12:49:13,264 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-01 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,296 INFO SUCCESS 2026-03-01 (10 questions)
+2026-05-30 12:49:13,533 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-02 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,574 INFO SUCCESS 2026-03-02 (11 questions)
+2026-05-30 12:49:13,594 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-08 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,623 INFO SUCCESS 2026-03-08 (10 questions)
+2026-05-30 12:49:13,672 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-06 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,701 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-03 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,750 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-04 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,772 INFO SUCCESS 2026-03-06 (11 questions)
+2026-05-30 12:49:13,779 INFO SUCCESS 2026-03-04 (6 questions)
+2026-05-30 12:49:13,792 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-07 "HTTP/1.1 200 OK"
+2026-05-30 12:49:13,817 INFO SUCCESS 2026-03-03 (10 questions)
+2026-05-30 12:49:13,824 INFO SUCCESS 2026-03-07 (10 questions)
+2026-05-30 12:49:14,074 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-09 "HTTP/1.1 200 OK"
+2026-05-30 12:49:14,099 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-10 "HTTP/1.1 200 OK"
+2026-05-30 12:49:14,129 INFO SUCCESS 2026-03-09 (10 questions)
+2026-05-30 12:49:14,140 INFO SUCCESS 2026-03-10 (10 questions)
+2026-05-30 12:49:14,168 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-05 "HTTP/1.1 200 OK"
+2026-05-30 12:49:14,197 INFO SUCCESS 2026-03-05 (10 questions)
+2026-05-30 12:49:14,812 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:14,849 INFO SUCCESS 2026-03-12 (12 questions)
+2026-05-30 12:49:15,000 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-11 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,031 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,062 INFO SUCCESS 2026-03-11 (10 questions)
+2026-05-30 12:49:15,073 INFO SUCCESS 2026-03-16 (11 questions)
+2026-05-30 12:49:15,195 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,230 INFO SUCCESS 2026-03-13 (12 questions)
+2026-05-30 12:49:15,268 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,299 INFO SUCCESS 2026-03-14 (11 questions)
+2026-05-30 12:49:15,365 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,388 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,407 INFO SUCCESS 2026-03-15 (8 questions)
+2026-05-30 12:49:15,412 INFO SUCCESS 2026-03-18 (6 questions)
+2026-05-30 12:49:15,568 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:15,601 INFO SUCCESS 2026-03-17 (10 questions)
+2026-05-30 12:49:16,053 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,123 INFO SUCCESS 2026-03-19 (8 questions)
+2026-05-30 12:49:16,148 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,177 INFO SUCCESS 2026-03-20 (10 questions)
+2026-05-30 12:49:16,388 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,426 INFO SUCCESS 2026-03-21 (10 questions)
+2026-05-30 12:49:16,429 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-25 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,459 INFO SUCCESS 2026-03-25 (10 questions)
+2026-05-30 12:49:16,609 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-24 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,648 INFO SUCCESS 2026-03-24 (11 questions)
+2026-05-30 12:49:16,680 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,714 INFO SUCCESS 2026-03-22 (13 questions)
+2026-05-30 12:49:16,777 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-28 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,806 INFO SUCCESS 2026-03-28 (10 questions)
+2026-05-30 12:49:16,810 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,838 INFO SUCCESS 2026-03-23 (10 questions)
+2026-05-30 12:49:16,946 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-27 "HTTP/1.1 200 OK"
+2026-05-30 12:49:16,978 INFO SUCCESS 2026-03-27 (11 questions)
+2026-05-30 12:49:17,008 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-26 "HTTP/1.1 200 OK"
+2026-05-30 12:49:17,032 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-29 "HTTP/1.1 200 OK"
+2026-05-30 12:49:17,055 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-30 "HTTP/1.1 200 OK"
+2026-05-30 12:49:17,084 INFO SUCCESS 2026-03-26 (10 questions)
+2026-05-30 12:49:17,093 INFO SUCCESS 2026-03-29 (10 questions)
+2026-05-30 12:49:17,108 INFO SUCCESS 2026-03-30 (11 questions)
+2026-05-30 12:49:18,052 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-04 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,092 INFO SUCCESS 2026-04-04 (10 questions)
+2026-05-30 12:49:18,227 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-08 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,260 INFO SUCCESS 2026-04-08 (11 questions)
+2026-05-30 12:49:18,347 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-03 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,406 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-06 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,434 INFO SUCCESS 2026-04-03 (10 questions)
+2026-05-30 12:49:18,440 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-03-31 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,466 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-09 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,489 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-01 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,512 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-07 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,512 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-05 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,554 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-02 "HTTP/1.1 200 OK"
+2026-05-30 12:49:18,577 INFO SUCCESS 2026-04-06 (10 questions)
+2026-05-30 12:49:18,582 INFO SUCCESS 2026-03-31 (10 questions)
+2026-05-30 12:49:18,590 INFO SUCCESS 2026-04-05 (7 questions)
+2026-05-30 12:49:18,597 INFO SUCCESS 2026-04-07 (10 questions)
+2026-05-30 12:49:18,602 INFO SUCCESS 2026-04-02 (10 questions)
+2026-05-30 12:49:18,611 INFO SUCCESS 2026-04-09 (10 questions)
+2026-05-30 12:49:18,624 INFO SUCCESS 2026-04-01 (10 questions)
+2026-05-30 12:49:19,317 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-10 "HTTP/1.1 200 OK"
+2026-05-30 12:49:19,351 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-11 "HTTP/1.1 200 OK"
+2026-05-30 12:49:19,379 INFO SUCCESS 2026-04-10 (10 questions)
+2026-05-30 12:49:19,390 INFO SUCCESS 2026-04-11 (10 questions)
+2026-05-30 12:49:19,656 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:19,691 INFO SUCCESS 2026-04-15 (10 questions)
+2026-05-30 12:49:19,887 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:19,925 INFO SUCCESS 2026-04-17 (10 questions)
+2026-05-30 12:49:19,974 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:19,997 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,056 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,080 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,080 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,126 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,151 INFO SUCCESS 2026-04-16 (10 questions)
+2026-05-30 12:49:20,161 INFO SUCCESS 2026-04-19 (9 questions)
+2026-05-30 12:49:20,170 INFO SUCCESS 2026-04-13 (11 questions)
+2026-05-30 12:49:20,179 INFO SUCCESS 2026-04-12 (10 questions)
+2026-05-30 12:49:20,188 INFO SUCCESS 2026-04-14 (10 questions)
+2026-05-30 12:49:20,197 INFO SUCCESS 2026-04-18 (10 questions)
+2026-05-30 12:49:20,449 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,488 INFO SUCCESS 2026-04-21 (10 questions)
+2026-05-30 12:49:20,819 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,856 INFO SUCCESS 2026-04-20 (9 questions)
+2026-05-30 12:49:20,899 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:20,929 INFO SUCCESS 2026-04-22 (10 questions)
+2026-05-30 12:49:21,267 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,305 INFO SUCCESS 2026-04-23 (10 questions)
+2026-05-30 12:49:21,326 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-26 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,357 INFO SUCCESS 2026-04-26 (11 questions)
+2026-05-30 12:49:21,562 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-29 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,597 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-24 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,625 INFO SUCCESS 2026-04-29 (11 questions)
+2026-05-30 12:49:21,631 INFO SUCCESS 2026-04-24 (10 questions)
+2026-05-30 12:49:21,874 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-02 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,910 INFO SUCCESS 2026-05-02 (10 questions)
+2026-05-30 12:49:21,928 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-28 "HTTP/1.1 200 OK"
+2026-05-30 12:49:21,957 INFO SUCCESS 2026-04-28 (10 questions)
+2026-05-30 12:49:21,968 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-25 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,039 INFO SUCCESS 2026-04-25 (11 questions)
+2026-05-30 12:49:22,066 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-27 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,094 INFO SUCCESS 2026-04-27 (10 questions)
+2026-05-30 12:49:22,366 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-04-30 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,405 INFO SUCCESS 2026-04-30 (10 questions)
+2026-05-30 12:49:22,539 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-06 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,580 INFO SUCCESS 2026-05-06 (10 questions)
+2026-05-30 12:49:22,805 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-03 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,838 INFO SUCCESS 2026-05-03 (7 questions)
+2026-05-30 12:49:22,847 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-01 "HTTP/1.1 200 OK"
+2026-05-30 12:49:22,875 INFO SUCCESS 2026-05-01 (10 questions)
+2026-05-30 12:49:23,205 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-05 "HTTP/1.1 200 OK"
+2026-05-30 12:49:23,244 INFO SUCCESS 2026-05-05 (10 questions)
+2026-05-30 12:49:23,272 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-04 "HTTP/1.1 200 OK"
+2026-05-30 12:49:23,305 INFO SUCCESS 2026-05-04 (11 questions)
+2026-05-30 12:49:23,514 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-07 "HTTP/1.1 200 OK"
+2026-05-30 12:49:23,547 INFO SUCCESS 2026-05-07 (10 questions)
+2026-05-30 12:49:23,900 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-08 "HTTP/1.1 200 OK"
+2026-05-30 12:49:23,931 INFO SUCCESS 2026-05-08 (10 questions)
+2026-05-30 12:49:23,949 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-09 "HTTP/1.1 200 OK"
+2026-05-30 12:49:23,980 INFO SUCCESS 2026-05-09 (10 questions)
+2026-05-30 12:49:24,114 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-10 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,144 INFO SUCCESS 2026-05-10 (10 questions)
+2026-05-30 12:49:24,187 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-11 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,217 INFO SUCCESS 2026-05-11 (10 questions)
+2026-05-30 12:49:24,246 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-13 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,277 INFO SUCCESS 2026-05-13 (10 questions)
+2026-05-30 12:49:24,397 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-12 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,455 INFO SUCCESS 2026-05-12 (10 questions)
+2026-05-30 12:49:24,477 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-14 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,506 INFO SUCCESS 2026-05-14 (10 questions)
+2026-05-30 12:49:24,810 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-16 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,843 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-15 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,872 INFO SUCCESS 2026-05-16 (10 questions)
+2026-05-30 12:49:24,884 INFO SUCCESS 2026-05-15 (10 questions)
+2026-05-30 12:49:24,918 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-19 "HTTP/1.1 200 OK"
+2026-05-30 12:49:24,948 INFO SUCCESS 2026-05-19 (10 questions)
+2026-05-30 12:49:24,974 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-17 "HTTP/1.1 200 OK"
+2026-05-30 12:49:25,002 INFO SUCCESS 2026-05-17 (10 questions)
+2026-05-30 12:49:25,110 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-18 "HTTP/1.1 200 OK"
+2026-05-30 12:49:25,140 INFO SUCCESS 2026-05-18 (10 questions)
+2026-05-30 12:49:25,769 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-23 "HTTP/1.1 200 OK"
+2026-05-30 12:49:25,804 INFO SUCCESS 2026-05-23 (10 questions)
+2026-05-30 12:49:25,836 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-22 "HTTP/1.1 200 OK"
+2026-05-30 12:49:25,861 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-21 "HTTP/1.1 200 OK"
+2026-05-30 12:49:25,890 INFO SUCCESS 2026-05-22 (10 questions)
+2026-05-30 12:49:25,896 INFO SUCCESS 2026-05-21 (10 questions)
+2026-05-30 12:49:26,015 INFO HTTP Request: GET https://www.indiabix.com/current-affairs/2026-05-20 "HTTP/1.1 200 OK"
+2026-05-30 12:49:26,050 INFO SUCCESS 2026-05-20 (10 questions)
