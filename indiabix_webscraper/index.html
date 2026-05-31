@@ -1,638 +1,1101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>IndiaBix Current Affairs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --bg: #0d0f14;
-  --surface: #13161e;
-  --surface2: #1a1e2a;
-  --border: #252a38;
-  --accent: #f0a500;
-  --accent2: #e05a2b;
-  --correct: #22c55e;
-  --wrong: #ef4444;
-  --text: #e8eaf0;
-  --muted: #6b7280;
-  --tag-bg: #1e2433;
-  --radius: 12px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:'DM Sans',sans-serif;
-  min-height:100vh;
-  font-size:15px;
-}
-
-/* ── SIDEBAR ── */
-.layout{display:flex;min-height:100vh}
-.sidebar{
-  width:280px;min-width:280px;
-  background:var(--surface);
-  border-right:1px solid var(--border);
-  display:flex;flex-direction:column;
-  position:sticky;top:0;height:100vh;overflow-y:auto;
-  z-index:10;
-}
-.sidebar::-webkit-scrollbar{width:4px}
-.sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
-.logo{
-  padding:28px 24px 20px;
-  border-bottom:1px solid var(--border);
-}
-.logo-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.3rem;font-weight:900;
-  color:var(--accent);letter-spacing:-.5px;
-  line-height:1.2;
-}
-.logo-sub{font-size:.72rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
-
-.stats-bar{
-  display:flex;flex-direction:column;gap:0;
-  padding:16px 20px;border-bottom:1px solid var(--border);
-}
-.stat-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0}
-.stat-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-.stat-val{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--accent);font-weight:500}
-
-.nav-section{padding:14px 20px 6px;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
-
-/* MODE TABS */
-.mode-tabs{display:flex;gap:6px;padding:0 16px 12px}
-.mode-tab{
-  flex:1;padding:8px 4px;border-radius:8px;border:1px solid var(--border);
-  background:transparent;color:var(--muted);cursor:pointer;font-size:.75rem;
-  font-family:'DM Sans',sans-serif;transition:all .2s;text-align:center;
-}
-.mode-tab.active{background:var(--accent);border-color:var(--accent);color:#000;font-weight:600}
-
-/* FILTERS */
-.filter-group{padding:0 16px 10px;display:flex;flex-direction:column;gap:8px}
-.filter-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
-.filter-select,.filter-input{
-  width:100%;padding:9px 12px;border-radius:8px;
-  border:1px solid var(--border);background:var(--surface2);
-  color:var(--text);font-family:'DM Sans',sans-serif;font-size:.82rem;
-  outline:none;transition:border .2s;
-  -webkit-appearance:none;appearance:none;
-}
-.filter-select:focus,.filter-input:focus{border-color:var(--accent)}
-.select-wrap{position:relative}
-.select-wrap::after{
-  content:'▾';position:absolute;right:10px;top:50%;transform:translateY(-50%);
-  color:var(--muted);pointer-events:none;font-size:.8rem;
-}
-.btn-load{
-  margin:0 16px 10px;padding:10px;border-radius:8px;
-  background:var(--accent);border:none;color:#000;font-weight:700;
-  font-family:'DM Sans',sans-serif;font-size:.85rem;cursor:pointer;
-  transition:opacity .2s;letter-spacing:.3px;
-}
-.btn-load:hover{opacity:.85}
-.btn-load:disabled{opacity:.4;cursor:not-allowed}
-
-/* CATEGORY LIST */
-.cat-list{flex:1;overflow-y:auto;padding:0 8px 16px}
-.cat-item{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:9px 14px;border-radius:8px;cursor:pointer;
-  transition:background .15s;font-size:.82rem;margin-bottom:2px;
-}
-.cat-item:hover{background:var(--surface2)}
-.cat-item.active{background:var(--tag-bg);color:var(--accent)}
-.cat-count{
-  font-family:'DM Mono',monospace;font-size:.7rem;
-  background:var(--border);padding:2px 7px;border-radius:20px;color:var(--muted);
-}
-
-/* ── MAIN CONTENT ── */
-.main{flex:1;display:flex;flex-direction:column;min-width:0}
-.topbar{
-  padding:18px 32px;border-bottom:1px solid var(--border);
-  background:var(--surface);position:sticky;top:0;z-index:5;
-  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
-}
-.topbar-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;flex:1;min-width:200px}
-.search-wrap{display:flex;gap:8px;align-items:center}
-.search-input{
-  padding:8px 14px;border-radius:8px;border:1px solid var(--border);
-  background:var(--surface2);color:var(--text);font-family:'DM Sans',sans-serif;
-  font-size:.82rem;width:220px;outline:none;transition:border .2s;
-}
-.search-input:focus{border-color:var(--accent)}
-.btn-search{
-  padding:8px 16px;border-radius:8px;background:var(--surface2);
-  border:1px solid var(--border);color:var(--text);cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:.82rem;transition:all .2s;
-}
-.btn-search:hover{border-color:var(--accent);color:var(--accent)}
-
-.content{padding:28px 32px;flex:1}
-
-/* ── LOADING ── */
-.loader{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding:80px 0;gap:16px;color:var(--muted);
-}
-.spinner{
-  width:36px;height:36px;border:3px solid var(--border);
-  border-top-color:var(--accent);border-radius:50%;
-  animation:spin .8s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* ── EMPTY ── */
-.empty{text-align:center;padding:80px 0;color:var(--muted)}
-.empty-icon{font-size:3rem;margin-bottom:16px;opacity:.4}
-.empty-text{font-size:.95rem}
-
-/* ── DATE HEADER ── */
-.date-group{margin-bottom:36px}
-.date-header{
-  display:flex;align-items:center;gap:14px;margin-bottom:18px;
-  padding-bottom:10px;border-bottom:1px solid var(--border);
-}
-.date-pill{
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#000;font-weight:700;font-size:.78rem;
-  padding:5px 14px;border-radius:20px;font-family:'DM Mono',monospace;
-  letter-spacing:.5px;
-}
-.date-qcount{font-size:.78rem;color:var(--muted)}
-
-/* ── QUESTION CARD ── */
-.q-card{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius);margin-bottom:16px;
-  transition:border-color .2s;overflow:hidden;
-}
-.q-card:hover{border-color:var(--border);filter:brightness(1.02)}
-.q-header{
-  display:flex;align-items:flex-start;gap:14px;
-  padding:20px 22px 16px;cursor:pointer;
-}
-.q-num{
-  background:var(--tag-bg);color:var(--accent);
-  font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;
-  padding:4px 9px;border-radius:6px;white-space:nowrap;margin-top:2px;flex-shrink:0;
-}
-.q-text{font-size:.92rem;line-height:1.6;font-weight:500;flex:1}
-.q-cat{
-  font-size:.68rem;padding:3px 10px;border-radius:20px;
-  background:var(--tag-bg);color:var(--muted);white-space:nowrap;flex-shrink:0;margin-top:3px;
-}
-.q-body{padding:0 22px 20px;display:none}
-.q-body.open{display:block}
-
-/* OPTIONS */
-.options-grid{display:grid;gap:8px;margin-bottom:16px}
-.option{
-  display:flex;align-items:center;gap:12px;
-  padding:11px 16px;border-radius:8px;border:1px solid var(--border);
-  background:var(--surface2);cursor:pointer;transition:all .2s;
-  font-size:.86rem;
-}
-.option:hover:not(.disabled){border-color:var(--accent);background:var(--tag-bg)}
-.option.selected{border-color:var(--accent);background:var(--tag-bg)}
-.option.correct{border-color:var(--correct);background:rgba(34,197,94,.1);color:var(--correct)}
-.option.wrong{border-color:var(--wrong);background:rgba(239,68,68,.08);color:var(--wrong)}
-.option.disabled{cursor:default;pointer-events:none}
-.opt-label{
-  width:26px;height:26px;border-radius:50%;background:var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'DM Mono',monospace;font-size:.72rem;font-weight:500;flex-shrink:0;
-}
-.correct .opt-label{background:var(--correct);color:#000}
-.wrong .opt-label{background:var(--wrong);color:#fff}
-
-/* ANSWER REVEAL */
-.answer-reveal{
-  border-top:1px solid var(--border);padding-top:14px;margin-top:4px;
-  display:none;
-}
-.answer-reveal.show{display:block}
-.answer-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(34,197,94,.12);border:1px solid var(--correct);
-  padding:6px 14px;border-radius:8px;font-size:.8rem;color:var(--correct);
-  margin-bottom:12px;
-}
-.explanation{
-  background:var(--tag-bg);border-left:3px solid var(--accent);
-  padding:12px 16px;border-radius:0 8px 8px 0;
-  font-size:.82rem;line-height:1.65;color:#b8c0d0;
-}
-.expl-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.8px;color:var(--accent);margin-bottom:6px;font-weight:600}
-
-/* SHOW ANSWER BTN */
-.btn-reveal{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:7px 16px;border-radius:8px;border:1px solid var(--border);
-  background:transparent;color:var(--muted);cursor:pointer;
-  font-family:'DM Sans',sans-serif;font-size:.78rem;transition:all .2s;
-  margin-top:10px;
-}
-.btn-reveal:hover{border-color:var(--accent);color:var(--accent)}
-
-/* ── PROGRESS BAR ── */
-.progress-bar{
-  height:3px;background:var(--border);position:sticky;top:61px;z-index:4;
-}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width .3s}
-
-/* ── MOBILE TOGGLE ── */
-.hamburger{
-  display:none;padding:8px;background:var(--surface2);border:1px solid var(--border);
-  border-radius:8px;cursor:pointer;color:var(--text);font-size:1.1rem;
-  position:fixed;top:14px;left:14px;z-index:100;
-}
-.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9}
-
-/* ── RESULT SUMMARY (practice) ── */
-.result-banner{
-  background:linear-gradient(135deg,#1a2a1a,#162416);
-  border:1px solid var(--correct);border-radius:var(--radius);
-  padding:20px 24px;margin-bottom:24px;display:none;
-}
-.result-banner.show{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.result-score{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--correct)}
-.result-label{font-size:.85rem;color:var(--muted)}
-.btn-retry{
-  margin-left:auto;padding:9px 20px;border-radius:8px;
-  background:var(--surface2);border:1px solid var(--border);
-  color:var(--text);cursor:pointer;font-family:'DM Sans',sans-serif;
-  font-size:.82rem;transition:all .2s;
-}
-.btn-retry:hover{border-color:var(--accent);color:var(--accent)}
-
-/* ── SCROLLTOP ── */
-.scrolltop{
-  position:fixed;bottom:24px;right:24px;
-  width:40px;height:40px;border-radius:50%;
-  background:var(--accent);border:none;color:#000;
-  font-size:1rem;cursor:pointer;display:none;
-  align-items:center;justify-content:center;z-index:20;
-  box-shadow:0 4px 20px rgba(240,165,0,.3);
-}
-.scrolltop.show{display:flex}
-
-@media(max-width:768px){
-  .sidebar{position:fixed;left:-300px;top:0;height:100vh;z-index:10;transition:left .3s}
-  .sidebar.open{left:0}
-  .sidebar-overlay.show{display:block}
-  .hamburger{display:flex;align-items:center;justify-content:center}
-  .main{padding-left:0}
-  .topbar{padding:14px 16px 14px 60px}
-  .content{padding:16px}
-  .search-input{width:150px}
-}
-</style>
-</head>
-<body>
-
-<button class="hamburger" id="hamburger">☰</button>
-<div class="sidebar-overlay" id="overlay"></div>
-
-<div class="layout">
-<!-- ── SIDEBAR ── -->
-<aside class="sidebar" id="sidebar">
-  <div class="logo">
-    <div class="logo-title">IndiaBix<br/>Current Affairs</div>
-    <div class="logo-sub">MCQ Learning Platform</div>
-  </div>
-
-  <div class="stats-bar" id="statsBar">
-    <div class="stat-item"><span class="stat-label">Questions</span><span class="stat-val" id="sTotal">—</span></div>
-    <div class="stat-item"><span class="stat-label">Dates</span><span class="stat-val" id="sDates">—</span></div>
-    <div class="stat-item"><span class="stat-label">Categories</span><span class="stat-val" id="sCats">—</span></div>
-  </div>
-
-  <div class="nav-section">View Mode</div>
-  <div class="mode-tabs">
-    <button class="mode-tab active" data-mode="learn">Learn</button>
-    <button class="mode-tab" data-mode="practice">Practice</button>
-  </div>
-
-  <div class="filter-group">
-    <div class="filter-label">Filter by Month</div>
-    <div class="select-wrap">
-      <select class="filter-select" id="monthSelect">
-        <option value="">All Months</option>
-      </select>
-    </div>
-
-    <div class="filter-label">Filter by Date</div>
-    <div class="select-wrap">
-      <select class="filter-select" id="dateSelect">
-        <option value="">All Dates</option>
-      </select>
-    </div>
-
-    <div id="practiceCountWrap" style="display:none">
-      <div class="filter-label">Questions (Practice)</div>
-      <input class="filter-input" type="number" id="practiceCount" value="10" min="1" max="200"/>
-    </div>
-  </div>
-
-  <button class="btn-load" id="loadBtn">Load Questions</button>
-
-  <div class="nav-section">Categories</div>
-  <div class="cat-list" id="catList"></div>
-</aside>
-
-<!-- ── MAIN ── -->
-<main class="main">
-  <div class="topbar">
-    <div class="topbar-title" id="topbarTitle">All Current Affairs</div>
-    <div class="search-wrap">
-      <input class="search-input" id="searchInput" placeholder="Search questions…" type="text"/>
-      <button class="btn-search" id="searchBtn">Search</button>
-    </div>
-  </div>
-  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-
-  <div class="content" id="content">
-    <div class="loader"><div class="spinner"></div><span>Loading…</span></div>
-  </div>
-</main>
-</div>
-
-<button class="scrolltop" id="scrolltop">↑</button>
-
-<script>
-const API = 'http://localhost:8000';  // same origin
-let allQuestions = [];
-let currentMode = 'learn';
-let selectedCategory = null;
-let practiceAnswers = {};  // qid -> chosen
-let practiceSubmitted = false;
-
-// ── UTILS ──────────────────────────────────────────────────────────────────
-async function apiFetch(path) {
-  const r = await fetch(API + path);
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  return r.json();
-}
-
-function groupByDate(questions) {
-  const map = {};
-  questions.forEach(q => {
-    if (!map[q.date]) map[q.date] = [];
-    map[q.date].push(q);
-  });
-  return map;
-}
-
-function monthLabel(ym) {
-  const [y, m] = ym.split('-');
-  return new Date(+y, +m - 1, 1).toLocaleString('en-IN', { month: 'long', year: 'numeric' });
-}
-
-function dateLabel(d) {
-  return new Date(d + 'T00:00:00').toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
-}
-
-// ── SIDEBAR TOGGLE ─────────────────────────────────────────────────────────
-document.getElementById('hamburger').onclick = () => {
-  document.getElementById('sidebar').classList.toggle('open');
-  document.getElementById('overlay').classList.toggle('show');
-};
-document.getElementById('overlay').onclick = () => {
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('overlay').classList.remove('show');
-};
-
-// ── SCROLL TOP ─────────────────────────────────────────────────────────────
-const scrollBtn = document.getElementById('scrolltop');
-window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('show', window.scrollY > 400);
-  // progress
-  const h = document.documentElement;
-  const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
-  document.getElementById('progressFill').style.width = pct + '%';
-});
-scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-
-// ── MODE TABS ──────────────────────────────────────────────────────────────
-document.querySelectorAll('.mode-tab').forEach(btn => {
-  btn.onclick = () => {
-    document.querySelectorAll('.mode-tab').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentMode = btn.dataset.mode;
-    document.getElementById('practiceCountWrap').style.display = currentMode === 'practice' ? 'block' : 'none';
-  };
-});
-
-// ── INIT ───────────────────────────────────────────────────────────────────
-async function init() {
-  try {
-    const [stats, months, dates, cats] = await Promise.all([
-      apiFetch('/stats'),
-      apiFetch('/months'),
-      apiFetch('/dates'),
-      apiFetch('/categories'),
-    ]);
-
-    // stats bar
-    document.getElementById('sTotal').textContent = stats.total_questions.toLocaleString();
-    document.getElementById('sDates').textContent = stats.total_dates.toLocaleString();
-    document.getElementById('sCats').textContent = stats.total_categories.toLocaleString();
-
-    // month select
-    const ms = document.getElementById('monthSelect');
-    months.forEach(m => {
-      const o = document.createElement('option');
-      o.value = m; o.textContent = monthLabel(m);
-      ms.appendChild(o);
-    });
-
-    // date select
-    const ds = document.getElementById('dateSelect');
-    dates.forEach(d => {
-      const o = document.createElement('option');
-      o.value = d.date; o.textContent = dateLabel(d.date) + ` (${d.question_count})`;
-      ds.appendChild(o);
-    });
-
-    // month → filter dates
-    ms.addEventListener('change', () => {
-      const m = ms.value;
-      Array.from(ds.options).forEach(o => {
-        if (!o.value) { o.hidden = false; return; }
-        o.hidden = m ? !o.value.startsWith(m) : false;
-      });
-      ds.value = '';
-    });
-
-    // category list
-    renderCatList(cats);
-
-    // load initial questions
-    await loadQuestions();
-  } catch(e) {
-    showError('Could not connect to API. Make sure the server is running on port 8000.', e);
-  }
-}
-
-function renderCatList(cats) {
-  const el = document.getElementById('catList');
-  el.innerHTML = '';
-  // "All" item
-  const all = document.createElement('div');
-  all.className = 'cat-item active';
-  all.innerHTML = `<span>All Categories</span><span class="cat-count">${cats.reduce((a,c)=>a+c.question_count,0)}</span>`;
-  all.onclick = () => selectCategory(null, all);
-  el.appendChild(all);
-
-  cats.forEach(c => {
-    const item = document.createElement('div');
-    item.className = 'cat-item';
-    item.innerHTML = `<span>${c.category}</span><span class="cat-count">${c.question_count}</span>`;
-    item.onclick = () => selectCategory(c.category, item);
-    el.appendChild(item);
-  });
-}
-
-function selectCategory(cat, el) {
-  document.querySelectorAll('.cat-item').forEach(i => i.classList.remove('active'));
-  el.classList.add('active');
-  selectedCategory = cat;
-}
-
-// ── LOAD QUESTIONS ─────────────────────────────────────────────────────────
-document.getElementById('loadBtn').onclick = loadQuestions;
-document.getElementById('loadBtn').addEventListener('click', () => {
-  // close sidebar on mobile
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('overlay').classList.remove('show');
-});
-
-async function loadQuestions() {
-  const btn = document.getElementById('loadBtn');
-  btn.disabled = true; btn.textContent = 'Loading…';
-  showLoader();
-  practiceAnswers = {}; practiceSubmitted = false;
-
-  try {
-    const month = document.getElementById('monthSelect').value;
-    const date = document.getElementById('dateSelect').value;
-    const count = parseInt(document.getElementById('practiceCount').value) || 10;
-
-    let questions;
-    if (currentMode === 'practice') {
-      if (selectedCategory) {
-        const qs = [`count=${count}`];
-        if (month) qs.push(`month=${month}`);
-        questions = await apiFetch(`/practice/${encodeURIComponent(selectedCategory)}?${qs.join('&')}`);
-      } else {
-        const d = date || (await apiFetch('/dates'))[0]?.date;
-        if (!d) throw new Error('No date available');
-        const qs = [`count=${count}`];
-        if (selectedCategory) qs.push(`category=${encodeURIComponent(selectedCategory)}`);
-        questions = await apiFetch(`/practice/date/${d}?${qs.join('&')}`);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndiaBix Current Affairs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0d0f14;
+        --surface: #13161e;
+        --surface2: #1a1e2a;
+        --border: #252a38;
+        --accent: #f0a500;
+        --accent2: #e05a2b;
+        --correct: #22c55e;
+        --wrong: #ef4444;
+        --text: #e8eaf0;
+        --muted: #6b7280;
+        --tag-bg: #1e2433;
+        --radius: 12px;
       }
-    } else {
-      const qs = [];
-      if (date) qs.push(`date=${date}`);
-      if (month && !date) qs.push(`month=${month}`);
-      if (selectedCategory) qs.push(`category=${encodeURIComponent(selectedCategory)}`);
-      questions = await apiFetch(`/questions?${qs.join('&')}`);
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        min-height: 100vh;
+        font-size: 15px;
+      }
 
-    allQuestions = questions;
-    updateTitle(month, date);
-    renderQuestions(questions);
-  } catch(e) {
-    showError('Failed to load questions.', e);
-  }
+      /* ── SIDEBAR ── */
+      .layout {
+        display: flex;
+        min-height: 100vh;
+      }
+      .sidebar {
+        width: 280px;
+        min-width: 280px;
+        background: var(--surface);
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 10;
+      }
+      .sidebar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .sidebar::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 2px;
+      }
+      .logo {
+        padding: 28px 24px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .logo-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: var(--accent);
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+      }
+      .logo-sub {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-top: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
 
-  btn.disabled = false; btn.textContent = 'Load Questions';
-}
+      .stats-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .stat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+      }
+      .stat-label {
+        font-size: 0.75rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .stat-val {
+        font-family: "DM Mono", monospace;
+        font-size: 0.8rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
 
-function updateTitle(month, date) {
-  const cat = selectedCategory || 'All Categories';
-  let timeStr = '';
-  if (date) timeStr = dateLabel(date);
-  else if (month) timeStr = monthLabel(month);
-  else timeStr = 'All Time';
-  document.getElementById('topbarTitle').textContent = `${cat} — ${timeStr}`;
-}
+      .nav-section {
+        padding: 14px 20px 6px;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--muted);
+      }
 
-// ── SEARCH ────────────────────────────────────────────────────────────────
-document.getElementById('searchBtn').onclick = doSearch;
-document.getElementById('searchInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doSearch();
-});
-async function doSearch() {
-  const q = document.getElementById('searchInput').value.trim();
-  if (q.length < 3) return;
-  showLoader();
-  try {
-    const questions = await apiFetch(`/search?q=${encodeURIComponent(q)}`);
-    allQuestions = questions;
-    document.getElementById('topbarTitle').textContent = `Search: "${q}" (${questions.length})`;
-    renderQuestions(questions);
-  } catch(e) {
-    showError(`No results for "${q}"`, e);
-  }
-}
+      /* MODE TABS */
+      .mode-tabs {
+        display: flex;
+        gap: 6px;
+        padding: 0 16px 12px;
+      }
+      .mode-tab {
+        flex: 1;
+        padding: 8px 4px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-family: "DM Sans", sans-serif;
+        transition: all 0.2s;
+        text-align: center;
+      }
+      .mode-tab.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #000;
+        font-weight: 600;
+      }
 
-// ── RENDER ────────────────────────────────────────────────────────────────
-function showLoader() {
-  document.getElementById('content').innerHTML = `<div class="loader"><div class="spinner"></div><span>Loading questions…</span></div>`;
-}
+      /* FILTERS */
+      .filter-group {
+        padding: 0 16px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .filter-label {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+      }
+      .filter-select,
+      .filter-input {
+        width: 100%;
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.82rem;
+        outline: none;
+        transition: border 0.2s;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .filter-select:focus,
+      .filter-input:focus {
+        border-color: var(--accent);
+      }
+      .select-wrap {
+        position: relative;
+      }
+      .select-wrap::after {
+        content: "▾";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        pointer-events: none;
+        font-size: 0.8rem;
+      }
+      .btn-load {
+        margin: 0 16px 10px;
+        padding: 10px;
+        border-radius: 8px;
+        background: var(--accent);
+        border: none;
+        color: #000;
+        font-weight: 700;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        letter-spacing: 0.3px;
+      }
+      .btn-load:hover {
+        opacity: 0.85;
+      }
+      .btn-load:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
 
-function showError(msg, err) {
-  console.error(err);
-  document.getElementById('content').innerHTML = `
+      /* CATEGORY LIST */
+      .cat-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 0 8px 16px;
+      }
+      .cat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.15s;
+        font-size: 0.82rem;
+        margin-bottom: 2px;
+      }
+      .cat-item:hover {
+        background: var(--surface2);
+      }
+      .cat-item.active {
+        background: var(--tag-bg);
+        color: var(--accent);
+      }
+      .cat-count {
+        font-family: "DM Mono", monospace;
+        font-size: 0.7rem;
+        background: var(--border);
+        padding: 2px 7px;
+        border-radius: 20px;
+        color: var(--muted);
+      }
+
+      /* ── MAIN CONTENT ── */
+      .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .topbar {
+        padding: 18px 32px;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .topbar-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        flex: 1;
+        min-width: 200px;
+      }
+      .search-wrap {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .search-input {
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.82rem;
+        width: 220px;
+        outline: none;
+        transition: border 0.2s;
+      }
+      .search-input:focus {
+        border-color: var(--accent);
+      }
+      .btn-search {
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.82rem;
+        transition: all 0.2s;
+      }
+      .btn-search:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .content {
+        padding: 28px 32px;
+        flex: 1;
+      }
+
+      /* ── LOADING ── */
+      .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 0;
+        gap: 16px;
+        color: var(--muted);
+      }
+      .spinner {
+        width: 36px;
+        height: 36px;
+        border: 3px solid var(--border);
+        border-top-color: var(--accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ── EMPTY ── */
+      .empty {
+        text-align: center;
+        padding: 80px 0;
+        color: var(--muted);
+      }
+      .empty-icon {
+        font-size: 3rem;
+        margin-bottom: 16px;
+        opacity: 0.4;
+      }
+      .empty-text {
+        font-size: 0.95rem;
+      }
+
+      /* ── DATE HEADER ── */
+      .date-group {
+        margin-bottom: 36px;
+      }
+      .date-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+      }
+      .date-pill {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #000;
+        font-weight: 700;
+        font-size: 0.78rem;
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-family: "DM Mono", monospace;
+        letter-spacing: 0.5px;
+      }
+      .date-qcount {
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      /* ── QUESTION CARD ── */
+      .q-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-bottom: 16px;
+        transition: border-color 0.2s;
+        overflow: hidden;
+      }
+      .q-card:hover {
+        border-color: var(--border);
+        filter: brightness(1.02);
+      }
+      .q-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px 22px 16px;
+        cursor: pointer;
+      }
+      .q-num {
+        background: var(--tag-bg);
+        color: var(--accent);
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        font-weight: 500;
+        padding: 4px 9px;
+        border-radius: 6px;
+        white-space: nowrap;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+      .q-text {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        font-weight: 500;
+        flex: 1;
+      }
+      .q-cat {
+        font-size: 0.68rem;
+        padding: 3px 10px;
+        border-radius: 20px;
+        background: var(--tag-bg);
+        color: var(--muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+      .q-body {
+        padding: 0 22px 20px;
+        display: none;
+      }
+      .q-body.open {
+        display: block;
+      }
+
+      /* OPTIONS */
+      .options-grid {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 11px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.86rem;
+      }
+      .option:hover:not(.disabled) {
+        border-color: var(--accent);
+        background: var(--tag-bg);
+      }
+      .option.selected {
+        border-color: var(--accent);
+        background: var(--tag-bg);
+      }
+      .option.correct {
+        border-color: var(--correct);
+        background: rgba(34, 197, 94, 0.1);
+        color: var(--correct);
+      }
+      .option.wrong {
+        border-color: var(--wrong);
+        background: rgba(239, 68, 68, 0.08);
+        color: var(--wrong);
+      }
+      .option.disabled {
+        cursor: default;
+        pointer-events: none;
+      }
+      .opt-label {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "DM Mono", monospace;
+        font-size: 0.72rem;
+        font-weight: 500;
+        flex-shrink: 0;
+      }
+      .correct .opt-label {
+        background: var(--correct);
+        color: #000;
+      }
+      .wrong .opt-label {
+        background: var(--wrong);
+        color: #fff;
+      }
+
+      /* ANSWER REVEAL */
+      .answer-reveal {
+        border-top: 1px solid var(--border);
+        padding-top: 14px;
+        margin-top: 4px;
+        display: none;
+      }
+      .answer-reveal.show {
+        display: block;
+      }
+      .answer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(34, 197, 94, 0.12);
+        border: 1px solid var(--correct);
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        color: var(--correct);
+        margin-bottom: 12px;
+      }
+      .explanation {
+        background: var(--tag-bg);
+        border-left: 3px solid var(--accent);
+        padding: 12px 16px;
+        border-radius: 0 8px 8px 0;
+        font-size: 0.82rem;
+        line-height: 1.65;
+        color: #b8c0d0;
+      }
+      .expl-label {
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--accent);
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      /* SHOW ANSWER BTN */
+      .btn-reveal {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.78rem;
+        transition: all 0.2s;
+        margin-top: 10px;
+      }
+      .btn-reveal:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      /* ── PROGRESS BAR ── */
+      .progress-bar {
+        height: 3px;
+        background: var(--border);
+        position: sticky;
+        top: 61px;
+        z-index: 4;
+      }
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        width: 0;
+        transition: width 0.3s;
+      }
+
+      /* ── MOBILE TOGGLE ── */
+      .hamburger {
+        display: none;
+        padding: 8px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        color: var(--text);
+        font-size: 1.1rem;
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 100;
+      }
+      .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9;
+      }
+
+      /* ── RESULT SUMMARY (practice) ── */
+      .result-banner {
+        background: linear-gradient(135deg, #1a2a1a, #162416);
+        border: 1px solid var(--correct);
+        border-radius: var(--radius);
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        display: none;
+      }
+      .result-banner.show {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .result-score {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--correct);
+      }
+      .result-label {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .btn-retry {
+        margin-left: auto;
+        padding: 9px 20px;
+        border-radius: 8px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        color: var(--text);
+        cursor: pointer;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.82rem;
+        transition: all 0.2s;
+      }
+      .btn-retry:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      /* ── SCROLLTOP ── */
+      .scrolltop {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: none;
+        color: #000;
+        font-size: 1rem;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+        box-shadow: 0 4px 20px rgba(240, 165, 0, 0.3);
+      }
+      .scrolltop.show {
+        display: flex;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          position: fixed;
+          left: -300px;
+          top: 0;
+          height: 100vh;
+          z-index: 10;
+          transition: left 0.3s;
+        }
+        .sidebar.open {
+          left: 0;
+        }
+        .sidebar-overlay.show {
+          display: block;
+        }
+        .hamburger {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .main {
+          padding-left: 0;
+        }
+        .topbar {
+          padding: 14px 16px 14px 60px;
+        }
+        .content {
+          padding: 16px;
+        }
+        .search-input {
+          width: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="hamburger" id="hamburger">☰</button>
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <div class="layout">
+      <!-- ── SIDEBAR ── -->
+      <aside class="sidebar" id="sidebar">
+        <div class="logo">
+          <div class="logo-title">IndiaBix<br />Current Affairs</div>
+          <div class="logo-sub">MCQ Learning Platform</div>
+        </div>
+
+        <div class="stats-bar" id="statsBar">
+          <div class="stat-item">
+            <span class="stat-label">Questions</span
+            ><span class="stat-val" id="sTotal">—</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Dates</span
+            ><span class="stat-val" id="sDates">—</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Categories</span
+            ><span class="stat-val" id="sCats">—</span>
+          </div>
+        </div>
+
+        <div class="nav-section">View Mode</div>
+        <div class="mode-tabs">
+          <button class="mode-tab active" data-mode="learn">Learn</button>
+          <button class="mode-tab" data-mode="practice">Practice</button>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-label">Filter by Month</div>
+          <div class="select-wrap">
+            <select class="filter-select" id="monthSelect">
+              <option value="">All Months</option>
+            </select>
+          </div>
+
+          <div class="filter-label">Filter by Date</div>
+          <div class="select-wrap">
+            <select class="filter-select" id="dateSelect">
+              <option value="">All Dates</option>
+            </select>
+          </div>
+
+          <div id="practiceCountWrap" style="display: none">
+            <div class="filter-label">Questions (Practice)</div>
+            <input
+              class="filter-input"
+              type="number"
+              id="practiceCount"
+              value="10"
+              min="1"
+              max="200" />
+          </div>
+        </div>
+
+        <button class="btn-load" id="loadBtn">Load Questions</button>
+
+        <div class="nav-section">Categories</div>
+        <div class="cat-list" id="catList"></div>
+      </aside>
+
+      <!-- ── MAIN ── -->
+      <main class="main">
+        <div class="topbar">
+          <div class="topbar-title" id="topbarTitle">All Current Affairs</div>
+          <div class="search-wrap">
+            <input
+              class="search-input"
+              id="searchInput"
+              placeholder="Search questions…"
+              type="text" />
+            <button class="btn-search" id="searchBtn">Search</button>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="content" id="content">
+          <div class="loader">
+            <div class="spinner"></div>
+            <span>Loading…</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <button class="scrolltop" id="scrolltop">↑</button>
+
+    <script>
+      const API = "http://localhost:8000"; // same origin
+      let allQuestions = [];
+      let currentMode = "learn";
+      let selectedCategory = null;
+      let practiceAnswers = {}; // qid -> chosen
+      let practiceSubmitted = false;
+
+      // ── UTILS ──────────────────────────────────────────────────────────────────
+      async function apiFetch(path) {
+        const r = await fetch(API + path);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      }
+
+      function groupByDate(questions) {
+        const map = {};
+        questions.forEach((q) => {
+          if (!map[q.date]) map[q.date] = [];
+          map[q.date].push(q);
+        });
+        return map;
+      }
+
+      function monthLabel(ym) {
+        const [y, m] = ym.split("-");
+        return new Date(+y, +m - 1, 1).toLocaleString("en-IN", {
+          month: "long",
+          year: "numeric",
+        });
+      }
+
+      function dateLabel(d) {
+        return new Date(d + "T00:00:00").toLocaleDateString("en-IN", {
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+        });
+      }
+
+      // ── SIDEBAR TOGGLE ─────────────────────────────────────────────────────────
+      document.getElementById("hamburger").onclick = () => {
+        document.getElementById("sidebar").classList.toggle("open");
+        document.getElementById("overlay").classList.toggle("show");
+      };
+      document.getElementById("overlay").onclick = () => {
+        document.getElementById("sidebar").classList.remove("open");
+        document.getElementById("overlay").classList.remove("show");
+      };
+
+      // ── SCROLL TOP ─────────────────────────────────────────────────────────────
+      const scrollBtn = document.getElementById("scrolltop");
+      window.addEventListener("scroll", () => {
+        scrollBtn.classList.toggle("show", window.scrollY > 400);
+        // progress
+        const h = document.documentElement;
+        const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
+        document.getElementById("progressFill").style.width = pct + "%";
+      });
+      scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // ── MODE TABS ──────────────────────────────────────────────────────────────
+      document.querySelectorAll(".mode-tab").forEach((btn) => {
+        btn.onclick = () => {
+          document
+            .querySelectorAll(".mode-tab")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentMode = btn.dataset.mode;
+          document.getElementById("practiceCountWrap").style.display =
+            currentMode === "practice" ? "block" : "none";
+        };
+      });
+
+      // ── INIT ───────────────────────────────────────────────────────────────────
+      async function init() {
+        try {
+          const [stats, months, dates, cats] = await Promise.all([
+            apiFetch("/stats"),
+            apiFetch("/months"),
+            apiFetch("/dates"),
+            apiFetch("/categories"),
+          ]);
+
+          // stats bar
+          document.getElementById("sTotal").textContent =
+            stats.total_questions.toLocaleString();
+          document.getElementById("sDates").textContent =
+            stats.total_dates.toLocaleString();
+          document.getElementById("sCats").textContent =
+            stats.total_categories.toLocaleString();
+
+          // month select
+          const ms = document.getElementById("monthSelect");
+          months.forEach((m) => {
+            const o = document.createElement("option");
+            o.value = m;
+            o.textContent = monthLabel(m);
+            ms.appendChild(o);
+          });
+
+          // date select
+          const ds = document.getElementById("dateSelect");
+          dates.forEach((d) => {
+            const o = document.createElement("option");
+            o.value = d.date;
+            o.textContent = dateLabel(d.date) + ` (${d.question_count})`;
+            ds.appendChild(o);
+          });
+
+          // month → filter dates
+          ms.addEventListener("change", () => {
+            const m = ms.value;
+            Array.from(ds.options).forEach((o) => {
+              if (!o.value) {
+                o.hidden = false;
+                return;
+              }
+              o.hidden = m ? !o.value.startsWith(m) : false;
+            });
+            ds.value = "";
+          });
+
+          // category list
+          renderCatList(cats);
+
+          // load initial questions
+          await loadQuestions();
+        } catch (e) {
+          showError(
+            "Could not connect to API. Make sure the server is running on port 8000.",
+            e,
+          );
+        }
+      }
+
+      function renderCatList(cats) {
+        const el = document.getElementById("catList");
+        el.innerHTML = "";
+        // "All" item
+        const all = document.createElement("div");
+        all.className = "cat-item active";
+        all.innerHTML = `<span>All Categories</span><span class="cat-count">${cats.reduce((a, c) => a + c.question_count, 0)}</span>`;
+        all.onclick = () => selectCategory(null, all);
+        el.appendChild(all);
+
+        cats.forEach((c) => {
+          const item = document.createElement("div");
+          item.className = "cat-item";
+          item.innerHTML = `<span>${c.category}</span><span class="cat-count">${c.question_count}</span>`;
+          item.onclick = () => selectCategory(c.category, item);
+          el.appendChild(item);
+        });
+      }
+
+      function selectCategory(cat, el) {
+        document
+          .querySelectorAll(".cat-item")
+          .forEach((i) => i.classList.remove("active"));
+        el.classList.add("active");
+        selectedCategory = cat;
+      }
+
+      // ── LOAD QUESTIONS ─────────────────────────────────────────────────────────
+      document.getElementById("loadBtn").onclick = loadQuestions;
+      document.getElementById("loadBtn").addEventListener("click", () => {
+        // close sidebar on mobile
+        document.getElementById("sidebar").classList.remove("open");
+        document.getElementById("overlay").classList.remove("show");
+      });
+
+      async function loadQuestions() {
+        const btn = document.getElementById("loadBtn");
+        btn.disabled = true;
+        btn.textContent = "Loading…";
+        showLoader();
+        practiceAnswers = {};
+        practiceSubmitted = false;
+
+        try {
+          const month = document.getElementById("monthSelect").value;
+          const date = document.getElementById("dateSelect").value;
+          const count =
+            parseInt(document.getElementById("practiceCount").value) || 10;
+
+          let questions;
+          if (currentMode === "practice") {
+            if (selectedCategory) {
+              const qs = [`count=${count}`];
+              if (month) qs.push(`month=${month}`);
+              questions = await apiFetch(
+                `/practice/${encodeURIComponent(selectedCategory)}?${qs.join("&")}`,
+              );
+            } else {
+              const d = date || (await apiFetch("/dates"))[0]?.date;
+              if (!d) throw new Error("No date available");
+              const qs = [`count=${count}`];
+              if (selectedCategory)
+                qs.push(`category=${encodeURIComponent(selectedCategory)}`);
+              questions = await apiFetch(`/practice/date/${d}?${qs.join("&")}`);
+            }
+          } else {
+            const qs = [];
+            if (date) qs.push(`date=${date}`);
+            if (month && !date) qs.push(`month=${month}`);
+            if (selectedCategory)
+              qs.push(`category=${encodeURIComponent(selectedCategory)}`);
+            questions = await apiFetch(`/questions?${qs.join("&")}`);
+          }
+
+          allQuestions = questions;
+          updateTitle(month, date);
+          renderQuestions(questions);
+        } catch (e) {
+          showError("Failed to load questions.", e);
+        }
+
+        btn.disabled = false;
+        btn.textContent = "Load Questions";
+      }
+
+      function updateTitle(month, date) {
+        const cat = selectedCategory || "All Categories";
+        let timeStr = "";
+        if (date) timeStr = dateLabel(date);
+        else if (month) timeStr = monthLabel(month);
+        else timeStr = "All Time";
+        document.getElementById("topbarTitle").textContent =
+          `${cat} — ${timeStr}`;
+      }
+
+      // ── SEARCH ────────────────────────────────────────────────────────────────
+      document.getElementById("searchBtn").onclick = doSearch;
+      document
+        .getElementById("searchInput")
+        .addEventListener("keydown", (e) => {
+          if (e.key === "Enter") doSearch();
+        });
+      async function doSearch() {
+        const q = document.getElementById("searchInput").value.trim();
+        if (q.length < 3) return;
+        showLoader();
+        try {
+          const questions = await apiFetch(
+            `/search?q=${encodeURIComponent(q)}`,
+          );
+          allQuestions = questions;
+          document.getElementById("topbarTitle").textContent =
+            `Search: "${q}" (${questions.length})`;
+          renderQuestions(questions);
+        } catch (e) {
+          showError(`No results for "${q}"`, e);
+        }
+      }
+
+      // ── RENDER ────────────────────────────────────────────────────────────────
+      function showLoader() {
+        document.getElementById("content").innerHTML =
+          `<div class="loader"><div class="spinner"></div><span>Loading questions…</span></div>`;
+      }
+
+      function showError(msg, err) {
+        console.error(err);
+        document.getElementById("content").innerHTML = `
     <div class="empty">
       <div class="empty-icon">⚠️</div>
       <div class="empty-text">${msg}</div>
     </div>`;
-}
+      }
 
-function renderQuestions(questions) {
-  const content = document.getElementById('content');
-  if (!questions.length) {
-    content.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">No questions found.</div></div>`;
-    return;
-  }
+      function renderQuestions(questions) {
+        const content = document.getElementById("content");
+        if (!questions.length) {
+          content.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">No questions found.</div></div>`;
+          return;
+        }
 
-  if (currentMode === 'practice') {
-    renderPractice(questions, content);
-  } else {
-    renderLearn(questions, content);
-  }
-}
+        if (currentMode === "practice") {
+          renderPractice(questions, content);
+        } else {
+          renderLearn(questions, content);
+        }
+      }
 
-function renderLearn(questions, container) {
-  const byDate = groupByDate(questions);
-  const dates = Object.keys(byDate).sort((a,b)=>b.localeCompare(a));
-  let html = '';
-  dates.forEach(date => {
-    const qs = byDate[date];
-    html += `<div class="date-group">
+      function renderLearn(questions, container) {
+        const byDate = groupByDate(questions);
+        const dates = Object.keys(byDate).sort((a, b) => b.localeCompare(a));
+        let html = "";
+        dates.forEach((date) => {
+          const qs = byDate[date];
+          html += `<div class="date-group">
       <div class="date-header">
         <span class="date-pill">${dateLabel(date)}</span>
-        <span class="date-qcount">${qs.length} question${qs.length>1?'s':''}</span>
+        <span class="date-qcount">${qs.length} question${qs.length > 1 ? "s" : ""}</span>
       </div>
-      ${qs.map((q,i) => questionCard(q, i, 'learn')).join('')}
+      ${qs.map((q, i) => questionCard(q, i, "learn")).join("")}
     </div>`;
-  });
-  container.innerHTML = html;
-  attachLearnEvents(container);
-}
+        });
+        container.innerHTML = html;
+        attachLearnEvents(container);
+      }
 
-function renderPractice(questions, container) {
-  container.innerHTML = `
+      function renderPractice(questions, container) {
+        container.innerHTML = `
     <div class="result-banner" id="resultBanner">
       <div>
         <div class="result-score" id="resultScore">0/${questions.length}</div>
@@ -641,7 +1104,7 @@ function renderPractice(questions, container) {
       <div style="color:var(--muted);font-size:.85rem" id="resultDetail"></div>
       <button class="btn-retry" onclick="loadQuestions()">New Set →</button>
     </div>
-    ${questions.map((q,i) => questionCard(q, i, 'practice')).join('')}
+    ${questions.map((q, i) => questionCard(q, i, "practice")).join("")}
     <div style="text-align:center;margin-top:24px">
       <button onclick="submitPractice()" id="submitBtn" style="
         padding:12px 40px;border-radius:10px;background:var(--accent);
@@ -649,28 +1112,34 @@ function renderPractice(questions, container) {
         font-family:'DM Sans',sans-serif;letter-spacing:.3px;
       ">Submit Answers</button>
     </div>`;
-  attachPracticeEvents(container, questions);
-}
+        attachPracticeEvents(container, questions);
+      }
 
-function questionCard(q, idx, mode) {
-  const optHtml = Object.entries(q.options).map(([lbl, txt]) =>
-    `<div class="option" data-label="${lbl}" data-qid="${q.id}">
+      function questionCard(q, idx, mode) {
+        const optHtml = Object.entries(q.options)
+          .map(
+            ([lbl, txt]) =>
+              `<div class="option" data-label="${lbl}" data-qid="${q.id}">
       <span class="opt-label">${lbl}</span>
       <span>${txt}</span>
-    </div>`
-  ).join('');
+    </div>`,
+          )
+          .join("");
 
-  const learnExtras = mode === 'learn' ? `
+        const learnExtras =
+          mode === "learn"
+            ? `
     <div class="answer-reveal" id="reveal-${q.id}">
       <div class="answer-badge">✓ Correct Answer: <strong>${q.correct_answer}. ${q.correct_answer_text}</strong></div>
-      ${q.explanation ? `<div class="expl-label">Explanation</div><div class="explanation">${q.explanation}</div>` : ''}
+      ${q.explanation ? `<div class="expl-label">Explanation</div><div class="explanation">${q.explanation}</div>` : ""}
     </div>
     <button class="btn-reveal" onclick="toggleReveal(${q.id}, this)">Show Answer</button>
-  ` : '';
+  `
+            : "";
 
-  return `<div class="q-card" id="qcard-${q.id}">
+        return `<div class="q-card" id="qcard-${q.id}">
     <div class="q-header" onclick="toggleCard(${q.id})">
-      <span class="q-num">Q${idx+1}</span>
+      <span class="q-num">Q${idx + 1}</span>
       <span class="q-text">${q.question}</span>
       <span class="q-cat">${q.category}</span>
     </div>
@@ -679,98 +1148,106 @@ function questionCard(q, idx, mode) {
       ${learnExtras}
     </div>
   </div>`;
-}
-
-// ── LEARN EVENTS ──────────────────────────────────────────────────────────
-function attachLearnEvents(container) {
-  // auto-open first question
-  const first = container.querySelector('.q-card');
-  if (first) {
-    const id = first.id.split('-')[1];
-    openCard(id);
-  }
-}
-
-function toggleCard(id) {
-  const body = document.getElementById(`qbody-${id}`);
-  body.classList.toggle('open');
-}
-
-function openCard(id) {
-  document.getElementById(`qbody-${id}`)?.classList.add('open');
-}
-
-function toggleReveal(id, btn) {
-  const rev = document.getElementById(`reveal-${id}`);
-  if (rev.classList.contains('show')) {
-    rev.classList.remove('show'); btn.textContent = 'Show Answer';
-  } else {
-    rev.classList.add('show'); btn.textContent = 'Hide Answer';
-  }
-}
-
-// ── PRACTICE EVENTS ───────────────────────────────────────────────────────
-function attachPracticeEvents(container, questions) {
-  // open all cards
-  questions.forEach(q => {
-    document.getElementById(`qbody-${q.id}`)?.classList.add('open');
-  });
-
-  container.querySelectorAll('.option').forEach(opt => {
-    opt.addEventListener('click', () => {
-      if (practiceSubmitted) return;
-      const qid = opt.dataset.qid;
-      const lbl = opt.dataset.label;
-      // deselect siblings
-      container.querySelectorAll(`.option[data-qid="${qid}"]`).forEach(o => o.classList.remove('selected'));
-      opt.classList.add('selected');
-      practiceAnswers[qid] = lbl;
-    });
-  });
-}
-
-function submitPractice() {
-  if (practiceSubmitted) return;
-  practiceSubmitted = true;
-
-  let correct = 0;
-  allQuestions.forEach(q => {
-    const chosen = practiceAnswers[q.id];
-    const opts = document.querySelectorAll(`.option[data-qid="${q.id}"]`);
-    opts.forEach(o => {
-      o.classList.add('disabled');
-      if (o.dataset.label === q.correct_answer) o.classList.add('correct');
-      else if (o.dataset.label === chosen && chosen !== q.correct_answer) o.classList.add('wrong');
-    });
-
-    // show explanation
-    const rev = document.getElementById(`reveal-${q.id}`);
-    if (!rev) {
-      // inject it
-      const body = document.getElementById(`qbody-${q.id}`);
-      if (body) {
-        const div = document.createElement('div');
-        div.className = 'answer-reveal show';
-        div.innerHTML = `<div class="answer-badge">✓ Correct: <strong>${q.correct_answer}. ${q.correct_answer_text}</strong></div>
-          ${q.explanation ? `<div class="expl-label">Explanation</div><div class="explanation">${q.explanation}</div>` : ''}`;
-        body.appendChild(div);
       }
-    }
 
-    if (chosen === q.correct_answer) correct++;
-  });
+      // ── LEARN EVENTS ──────────────────────────────────────────────────────────
+      function attachLearnEvents(container) {
+        // auto-open first question
+        const first = container.querySelector(".q-card");
+        if (first) {
+          const id = first.id.split("-")[1];
+          openCard(id);
+        }
+      }
 
-  document.getElementById('submitBtn').style.display = 'none';
-  const banner = document.getElementById('resultBanner');
-  banner.classList.add('show');
-  document.getElementById('resultScore').textContent = `${correct}/${allQuestions.length}`;
-  const pct = Math.round(correct / allQuestions.length * 100);
-  document.getElementById('resultDetail').textContent = `${pct}% accuracy — ${correct} correct, ${allQuestions.length - correct} wrong`;
-  banner.scrollIntoView({ behavior: 'smooth' });
-}
+      function toggleCard(id) {
+        const body = document.getElementById(`qbody-${id}`);
+        body.classList.toggle("open");
+      }
 
-// ── BOOT ──────────────────────────────────────────────────────────────────
-init();
-</script>
-</body>
+      function openCard(id) {
+        document.getElementById(`qbody-${id}`)?.classList.add("open");
+      }
+
+      function toggleReveal(id, btn) {
+        const rev = document.getElementById(`reveal-${id}`);
+        if (rev.classList.contains("show")) {
+          rev.classList.remove("show");
+          btn.textContent = "Show Answer";
+        } else {
+          rev.classList.add("show");
+          btn.textContent = "Hide Answer";
+        }
+      }
+
+      // ── PRACTICE EVENTS ───────────────────────────────────────────────────────
+      function attachPracticeEvents(container, questions) {
+        // open all cards
+        questions.forEach((q) => {
+          document.getElementById(`qbody-${q.id}`)?.classList.add("open");
+        });
+
+        container.querySelectorAll(".option").forEach((opt) => {
+          opt.addEventListener("click", () => {
+            if (practiceSubmitted) return;
+            const qid = opt.dataset.qid;
+            const lbl = opt.dataset.label;
+            // deselect siblings
+            container
+              .querySelectorAll(`.option[data-qid="${qid}"]`)
+              .forEach((o) => o.classList.remove("selected"));
+            opt.classList.add("selected");
+            practiceAnswers[qid] = lbl;
+          });
+        });
+      }
+
+      function submitPractice() {
+        if (practiceSubmitted) return;
+        practiceSubmitted = true;
+
+        let correct = 0;
+        allQuestions.forEach((q) => {
+          const chosen = practiceAnswers[q.id];
+          const opts = document.querySelectorAll(`.option[data-qid="${q.id}"]`);
+          opts.forEach((o) => {
+            o.classList.add("disabled");
+            if (o.dataset.label === q.correct_answer)
+              o.classList.add("correct");
+            else if (o.dataset.label === chosen && chosen !== q.correct_answer)
+              o.classList.add("wrong");
+          });
+
+          // show explanation
+          const rev = document.getElementById(`reveal-${q.id}`);
+          if (!rev) {
+            // inject it
+            const body = document.getElementById(`qbody-${q.id}`);
+            if (body) {
+              const div = document.createElement("div");
+              div.className = "answer-reveal show";
+              div.innerHTML = `<div class="answer-badge">✓ Correct: <strong>${q.correct_answer}. ${q.correct_answer_text}</strong></div>
+          ${q.explanation ? `<div class="expl-label">Explanation</div><div class="explanation">${q.explanation}</div>` : ""}`;
+              body.appendChild(div);
+            }
+          }
+
+          if (chosen === q.correct_answer) correct++;
+        });
+
+        document.getElementById("submitBtn").style.display = "none";
+        const banner = document.getElementById("resultBanner");
+        banner.classList.add("show");
+        document.getElementById("resultScore").textContent =
+          `${correct}/${allQuestions.length}`;
+        const pct = Math.round((correct / allQuestions.length) * 100);
+        document.getElementById("resultDetail").textContent =
+          `${pct}% accuracy — ${correct} correct, ${allQuestions.length - correct} wrong`;
+        banner.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // ── BOOT ──────────────────────────────────────────────────────────────────
+      init();
+    </script>
+  </body>
 </html>
