@@ -11,3 +11,5 @@ wheels/
 .history/
 pdfs/
 
+.DS_Store
+indiabix_webscraper/.DS_Store
